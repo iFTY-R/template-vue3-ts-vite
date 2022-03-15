@@ -1,10 +1,10 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter,  createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
-  { path: '/', name: 'Home', component: () => import('views/home/index.vue') }
+  { path: '/', name: 'Home', component: () => import('views/home/pinia.vue') }
 ]
 const router = createRouter({
-  history: createWebHashHistory(),    // history 模式则使用 createWebHistory()
+  history: createWebHistory(),    // history 模式则使用 createWebHistory()
   routes,
 })
 

@@ -3,15 +3,9 @@ import { ref } from 'vue'
 
 // defineStore中的第一个参数需要在你整个应用当中保持唯一。
 export const useCounterStore = defineStore('counter', {
-  state: () => {
-    return {
-      count: 0
-    }
-  },
+  state: () => ({ count: 0 }),
   getters: {
-    count() {
-      return this.count
-    }
+    doubleCount: state => state.count * 2
   },
   actions: {
     increment() {
